@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  5 NOV 2013 09:58
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  5 NOV 2013 10:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -496,7 +496,59 @@ Class revtex4-1 Info: cite was not loaded (OK!) on input line 16.
 Class revtex4-1 Info: mcite was not loaded (OK!) on input line 16.
 Class revtex4-1 Info: multicol was not loaded (OK!) on input line 16.
 
-No file ms_resource_ratio.aux.
+(./ms_resource_ratio.aux
+
+LaTeX Warning: Label `e:bnet' multiply defined.
+
+
+LaTeX Warning: Label `e:bnet' multiply defined.
+
+
+LaTeX Warning: Label `e:bnet' multiply defined.
+
+
+LaTeX Warning: Label `e:bnet' multiply defined.
+
+
+LaTeX Warning: Label `e:bnet' multiply defined.
+
+
+LaTeX Warning: Label `e:bnet' multiply defined.
+
+
+LaTeX Warning: Label `e:bnet' multiply defined.
+
+
+LaTeX Warning: Label `e:bnet' multiply defined.
+
+
+LaTeX Warning: Label `e:bnet' multiply defined.
+
+
+LaTeX Warning: Label `e:bnet' multiply defined.
+
+
+LaTeX Warning: Label `e:bnet' multiply defined.
+
+
+LaTeX Warning: Label `e:bnet' multiply defined.
+
+
+LaTeX Warning: Label `e:bnet' multiply defined.
+
+
+LaTeX Warning: Label `e:bnet' multiply defined.
+
+
+LaTeX Warning: Label `e:bnet' multiply defined.
+
+
+LaTeX Warning: Label `e:bnet' multiply defined.
+
+
+LaTeX Warning: Label `e:bnet' multiply defined.
+
+)
 \openout1 = `ms_resource_ratio.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -513,7 +565,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
-(/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count106
 \scratchdimen=\dimen109
@@ -555,6 +607,8 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 16.
 LaTeX Info: Redefining \pageref on input line 16.
 LaTeX Info: Redefining \nameref on input line 16.
+
+(./ms_resource_ratio.out) (./ms_resource_ratio.out)
 \@outlinefile=\write4
 \openout4 = `ms_resource_ratio.out'.
 
@@ -580,15 +634,15 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 56.
 
 
-Overfull \hbox (14.79677pt too wide) detected at line 106
+Overfull \hbox (12.29791pt too wide) detected at line 106
 [][][] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 S[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/i
-t/10 eN[] \OMS/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 q[]G[]N[] \OT1/cmr/m/n/10 + 
+t/10 eN[] \OMS/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 q[]G[]P[] \OT1/cmr/m/n/10 + 
 [] \OML/cmm/m/it/10 r\OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^
 ^^\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 q[]D[] \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10
  ^^A[][]
  []
 
-<R-Ratio_theory.pdf, id=16, 722.7pt x 360.34625pt>
+<R-Ratio_theory.pdf, id=61, 722.7pt x 360.34625pt>
 File: R-Ratio_theory.pdf Graphic file (type pdf)
  <use R-Ratio_theory.pdf>
 Package pdftex.def Info: R-Ratio_theory.pdf used on input line 118.
@@ -614,14 +668,14 @@ LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
  on input line 141.
 
 [3 <./R-Ratio_theory.pdf>]
-<DetritusDiffusion.pdf, id=56, 361.35pt x 360.34625pt>
+<DetritusDiffusion.pdf, id=98, 361.35pt x 360.34625pt>
 File: DetritusDiffusion.pdf Graphic file (type pdf)
 
 <use DetritusDiffusion.pdf>
 Package pdftex.def Info: DetritusDiffusion.pdf used on input line 187.
 (pdftex.def)             Requested size: 229.49844pt x 228.86131pt.
 
-<NutrientDiffusion.pdf, id=57, 361.35pt x 360.34625pt>
+<NutrientDiffusion.pdf, id=99, 361.35pt x 360.34625pt>
 File: NutrientDiffusion.pdf Graphic file (type pdf)
 
 <use NutrientDiffusion.pdf>
@@ -632,7 +686,7 @@ Package pdftex.def Info: NutrientDiffusion.pdf used on input line 233.
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
  on input line 242.
 
-<ProducerDiffusion.pdf, id=75, 361.35pt x 360.34625pt>
+<ProducerDiffusion.pdf, id=115, 361.35pt x 360.34625pt>
 File: ProducerDiffusion.pdf Graphic file (type pdf)
 
 <use ProducerDiffusion.pdf>
@@ -641,40 +695,33 @@ Package pdftex.def Info: ProducerDiffusion.pdf used on input line 277.
  [5 <./NutrientDiffusion.pdf>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 285.
+ on input line 283.
 
-<AlternateStates.pdf, id=91, 361.35pt x 360.34625pt>
+<AlternateStates.pdf, id=130, 361.35pt x 360.34625pt>
 File: AlternateStates.pdf Graphic file (type pdf)
- <use AlternateStates.pdf>
+
+<use AlternateStates.pdf>
 Package pdftex.def Info: AlternateStates.pdf used on input line 300.
 (pdftex.def)             Requested size: 229.49844pt x 228.86131pt.
-
-[6 <./ProducerDiffusion.pdf> <./AlternateStates.pdf>]
+ [6 <./ProducerDiffusion.pdf> <./AlternateStates.pdf>]
 No file ms_resource_ratio.bbl.
 [7]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 321.
  (./ms_resource_ratio.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 321.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 321.
+Package rerunfilecheck Info: File `ms_resource_ratio.out' has not changed.
+(rerunfilecheck)             Checksum: 79FF30880C1592409AC5A4DCAF02F380;821.
 
 
-Package rerunfilecheck Warning: File `ms_resource_ratio.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `ms_resource_ratio.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  79FF30880C1592409AC5A4DCAF02F380;821.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
-
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7129 strings out of 493633
- 101876 string characters out of 3143378
- 217398 words of memory out of 3000000
- 10334 multiletter control sequences out of 15000+200000
+ 7151 strings out of 493633
+ 102188 string characters out of 3143378
+ 223041 words of memory out of 3000000
+ 10350 multiletter control sequences out of 15000+200000
  7020 words of font info for 25 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  29i,12n,28p,2144b,377s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -693,10 +740,10 @@ ve/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 1/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2011
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2011/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on ms_resource_ratio.pdf (7 pages, 218877 bytes).
+Output written on ms_resource_ratio.pdf (7 pages, 220020 bytes).
 PDF statistics:
- 179 PDF objects out of 1000 (max. 8388607)
- 143 compressed objects within 2 object streams
+ 216 PDF objects out of 1000 (max. 8388607)
+ 180 compressed objects within 2 object streams
  42 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 122 words of extra memory for PDF output out of 10000 (max. 10000000)
 

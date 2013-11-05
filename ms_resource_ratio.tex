@@ -116,7 +116,7 @@ The conditions for coexistence of primary producer species competing for two res
 \begin{figure}[tb!]
    \centering
    \includegraphics[width=0.5\textwidth]{R-Ratio_theory.pdf}
-   \caption{Graphical interpretation of the resource-ratio theory for a single location. The panel A) schematizes the equilibrium state of the system with a single resident primary producer population. Nutrient cycling moves the location of the supply point, from location $S$ to the location $S’$. At equilibrium, the consumption vector is opposed to a net nutrient supply vector. The location of the equilibrium nutrient concentration will only be affected if the slope of the net supply vector is different of the slope of the consumption vector. Panel B) illustrates the conditions for coexistence. A second species could invade the system if its ZNGI is below the equilibrium nutrient concentration in the presence of the resident species. The equilibrium nutrient concentration would thus be found at the crossing of the two ZNGIs. Stable coexistence will occur if the location of the net supply points is found between the projection of the two consumption vectors (dotted lines) and if each species is more limited by the nutrient it requires the most (in other words, if the slope of the consumption vector increases as the ZNGI moves up and left).}
+   \caption{Graphical interpretation of the resource-ratio theory for a single location. The panel A) schematizes the equilibrium state of the system with a single resident primary producer population.  At equilibrium, the consumption vector is aligned with the nutrient supply point. The position of the equilibrium nutrient concentration depends on the quota of the producer, the ZNGI and the location of the nutrient supply point. The location of the equilibrium nutrient concentration will only be affected by recycling if the slope of the net supply vector is different of the slope of the consumption vector (not implemented here, see Daufresne and Hedin 2005). Nutrient cycling moves the location of the supply point, from location $S$ to the location $S’$. Panel B) illustrates the conditions for stable coexistence. A second species could invade the system if its ZNGI is below the equilibrium nutrient concentration in the presence of the resident species. The equilibrium nutrient concentration would thus be found at the crossing of the two ZNGIs. Stable coexistence will occur if the location of the net supply point is found between the projection of the two consumption vectors (dotted lines) and if each species is more limited by the nutrient it requires the most (in other words, if the slope of the consumption vector increases as the ZNGI moves up and left).}
    \label{f:R-Ratio_theory}
 \end{figure}
 
@@ -137,11 +137,11 @@ The use of vectors is a convenient tool to understand the dynamics of the system
 
 \begin{equation}
 	\label{e:bnet}
-	S_{jx}-e\widehat{N}_{jx}=\sum_{i=1}^{s}q_{ij}\widehat{G}_{ix}\widehat{N}_{jx}-\sum_{i=1}^{s}r(1-l)\widehat{D}_{ix}
+	S_{jx}-e\widehat{N}_{jx}=\sum_{i=1}^{s}q_{ij}\widehat{G}_{ix}\widehat{P}_{ix}-\sum_{i=1}^{s}r(1-l)\widehat{D}_{ix}
 \end{equation}
 %-----------------%
 
-The condition at Eq. 7 defines the $ZNGI_i$ on the two-dimensional space of nutrients (growth is equal to mortality). The condition at Eq. 8 implies that at equilibrium, the accumulation of dead organic matter equals detritus recycling. The condition at Eq. 9 implies that the consumption of inorganic nutrients must equal the rate at which they are supplied. The primary producer consumes the two nutrients simultaneously, at the rate indicated by a consumption vector $\overrightarrow{c}_{x} = (-q_{i1}\widehat{G}_{ix}\widehat{N}_{1x},-q_{i2}\widehat{G}_{ix}\widehat{N}_{2x})$. The slope of the consumption vector is equal to the quota of the primary producer ($\alpha_{i}=q_{i2}/q_{i1}$, Fig. 1A). At equilibrium, the inorganic nutrient concentration is located along the ZNGI (Fig. 1A), at the point satisfying the following condition:
+The condition at Eq. 7 defines the $ZNGI_i$ on the two-dimensional space of nutrients (growth is equal to mortality). The condition at Eq. 8 implies that at equilibrium, the accumulation of dead organic matter equals detritus mineralization. The condition at Eq. 9 implies that the consumption of inorganic nutrients must equal the rate at which they are supplied. The primary producer consumes the two nutrients simultaneously, at the rate indicated by a consumption vector $\overrightarrow{c}_{x} = (-q_{i1}\widehat{G}_{ix}\widehat{N}_{1x},-q_{i2}\widehat{G}_{ix}\widehat{N}_{2x})$. The slope of the consumption vector is equal to the quota of the primary producer ($\alpha_{i}=q_{i2}/q_{i1}$, Fig. 1A). At equilibrium, the inorganic nutrient concentration is located along the ZNGI (Fig. 1A), at the point satisfying the following condition:
 
 %-----------------%
 \begin{equation}
@@ -152,7 +152,7 @@ The condition at Eq. 7 defines the $ZNGI_i$ on the two-dimensional space of nutr
 
 where $\overrightarrow{u}_{x}=(S_{1x}-e\widehat{N}_{1x},S_{2x}-e\widehat{N}_{2x})$ is the inorganic nutrient supply vector. The inorganic nutrient concentration at equilibrium is found at the location where the projection of the consumption vector crosses the supply point (Fig. 1A). 
 
-	The mineralization of the detritus pool alters the equilibrium density of the primary producer because it increases the overall nutrient supply. The inorganic nutrient consumption consequently increases, and potentially the inorganic nutrient concentration (Daufresne and Hedin, 2005). We must therefore consider an altered inorganic nutrient supply vector to balance the new consumption vector:
+	The mineralization of detritus alters the equilibrium density of the primary producer because it increases the total inorganic nutrient supply. The inorganic nutrient consumption consequently increases, and potentially the inorganic nutrient concentration (Daufresne and Hedin, 2005). We must therefore consider an altered inorganic nutrient supply vector to balance the new consumption vector:
 
 %-----------------%
 \begin{equation}
@@ -166,7 +166,7 @@ where $\overrightarrow{u'}_{x}$ is an altered nutrient supply vector. The consum
 %-----------------%
 \begin{equation}
 	\label{e:bnet}
-	S'_{jx}=\sum_{i=1}^{s}q_{ij}G_{ix}P_{ix}e^{-1}+N_{jx}
+	S'_{jx}=\sum_{i=1}^{s}q_{ij}G_{ix}\widehat{P}_{ix}e^{-1}+\widehat{N}_{jx}
 \end{equation}
 %-----------------%
 
@@ -177,7 +177,7 @@ The location of the net supply point $S'$ will simply be a translation of the or
 %========================================================%
 \section{Metaecosystem dynamics}
 
- In this section we therefore analyse the impacts of spatial flows between two ecosystems on the equilibrium inorganic nutrient concentration in the presence of a single resident primary producer. We focus on the location of the net supply point because it is central to understand invasion conditions (equilibrium inorganic nutrient concentration) and thus coexistence in both locations. Stable coexistence between two species will be possible when each of them has a positive per capita growth rate when at low abundance (Chesson, 2000; Gravel et al. 2011). In terms of graphical representation of the dynamics, it means that the equilibrium nutrient concentration of each species when resident will be above the ZNGI of the invader. We study each spatial flow independently, even though they are likely to be colinear in nature, in order to distinguish their isolated effect on coexistence. We finish with the analysis of a special case where spatial flows and nutrient recycling promote unstable coexistence (alternate stable states) between two competing species. The analysis is essentially derived from a graphical interpretation of equilibrium vectors.
+In this section we now analyse the impacts of spatial flows between two ecosystems on the equilibrium inorganic nutrient concentration in the presence of a single resident primary producer. We focus on the location of the net supply point because it is central to understand invasion conditions (equilibrium inorganic nutrient concentration) and thus coexistence in both locations. Stable coexistence between two species will be possible when each of them has a positive per capita growth rate when at low abundance (Chesson, 2000; Gravel et al. 2011). In terms of graphical representation of the dynamics, it means that the equilibrium nutrient concentration of each species when resident will be above the ZNGI of the invader. We study each spatial flow independently, even though they are likely to be colinear in nature, in order to distinguish their isolated effect on coexistence. We finish with the analysis of a special case where spatial flows and nutrient recycling promote unstable coexistence (alternate stable states) between two competing species. The analysis is essentially derived from a graphical interpretation of equilibrium vectors.
 
 %===============================%
 \subsection{Case 1: Detritus diffusion}
