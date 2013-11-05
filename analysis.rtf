@@ -1,0 +1,273 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf400
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Monaco;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue142;}
+\margl1440\margr1440\vieww17360\viewh16600\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs22 \cf2 %%%%%%%%%%%%%%%%%%%%%\
+% Vectorial notation \
+%%%%%%%%%%%%%%%%%%%%%\
+\
+% \'c0 l'\'e9quilibre la somme des vecteurs est \'e9gale \'e0 un vecteur nul\
+u + r + c + d = 0\
+\
+% Sans recyclage et dispersion, le vecteur de supply \'e9gal le n\'e9gatif du vecteur de consommation\
+\
+u = -c\
+\
+% Avec recyclage et dispersion, le vecteur de supply devient un vecteur net\
+\
+U = -c\
+\
+\
+% Le vecteur de supply net se d\'e9taille ainsi:\
+\
+Uj = e*(Sj + delta_Sj - eqNj)\
+\
+% Par cons\'e9quent, le point de supply net est le suivant:\
+\
+Sj + delta_Sj = (-cj + e*eqNj)/e\
+\
+% Le d\'e9placement du point de supply d\'e9pend donc du changement de consommation et du d\'e9placement directe de eqNj\
+\
+% Et le d\'e9placement du point de supply \
+\
+delta_Sj = -cj/e + eqNj - Sj\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f1\fs24 \cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs22 \cf2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
+% Nutrient diffusion only\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f1\fs24 \cf0 syms\cf2  \cf0 N1x\cf2  \cf0 N2x\cf2  \cf0 N1y\cf2  \cf0 N2y\cf2  \cf0 Px\cf2  \cf0 Py\cf2  \cf0 Dx\cf2  \cf0 Dy\cf2 \
+\cf0 syms\cf2  \cf0 S1x\cf2  \cf0 S2x\cf2  \cf0 S1y\cf2  \cf0 S2y\cf2  \cf0 e\cf2 \
+\cf0 syms\cf2  \cf0 q1\cf2  \cf0 q2\cf2  \cf0 N1s\cf2  \cf0 N2s\cf2  \cf0 Gx\cf2  \cf0 Gy\cf2  \cf0 m\cf2  \cf0 a1\cf2  \cf0 a2\cf2 \
+\cf0 syms\cf2  \cf0 d\cf2  \cf0 phi\cf2 \
+\cf0 syms\cf2  \cf0 DN\cf2  \cf0 DD\cf2 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs22 \cf0 dN1x\cf2  	= \cf0 e\cf2 *\cf0 S1x\cf2  - \cf0 e\cf2 *\cf0 N1x\cf2  - \cf0 q1\cf2 *\cf0 Gx\cf2 *\cf0 Px\cf2  + \cf0 q1\cf2 *\cf0 phi\cf2 *\cf0 d\cf2 *\cf0 Dx\cf2  - \cf0 DN\cf2 *(\cf0 N1x\cf2 -\cf0 N1y\cf2 )\
+\cf0 dN2x\cf2  	= \cf0 e\cf2 *\cf0 S2x\cf2  - \cf0 e\cf2 *\cf0 N2x\cf2  - \cf0 q2\cf2 *\cf0 Gx\cf2 *\cf0 Px\cf2  + \cf0 q2\cf2 *\cf0 phi\cf2 *\cf0 d\cf2 *\cf0 Dx\cf2  - \cf0 DN\cf2 *(\cf0 N2x\cf2 -\cf0 N2y\cf2 )\
+\cf0 dPx\cf2  	= \cf0 Gx\cf2 *\cf0 Px\cf2  - \cf0 m\cf2 *\cf0 Px\cf2 \
+\cf0 dDx\cf2  	= \cf0 m\cf2 *\cf0 Px\cf2  - \cf0 d\cf2 *\cf0 Dx\cf2  \
+		\
+\cf0 dN1y\cf2  	= \cf0 e\cf2 *\cf0 S1y\cf2  - \cf0 e\cf2 *\cf0 N1y\cf2  - \cf0 q1\cf2 *\cf0 Gy\cf2 *\cf0 Py\cf2  + \cf0 q1\cf2 *\cf0 phi\cf2 *\cf0 d\cf2 *\cf0 Dy\cf2  - \cf0 DN\cf2 *(\cf0 N1y\cf2 -\cf0 N1x\cf2 )\
+\cf0 dN2y\cf2  	= \cf0 e\cf2 *\cf0 S2y\cf2  - \cf0 e\cf2 *\cf0 N2y\cf2  - \cf0 q2\cf2 *\cf0 Gy\cf2 *\cf0 Py\cf2  + \cf0 q2\cf2 *\cf0 phi\cf2 *\cf0 d\cf2 *\cf0 Dy\cf2  - \cf0 DN\cf2 *(\cf0 N2y\cf2 -\cf0 N2x\cf2 )\
+\cf0 dPy\cf2  	= \cf0 Gy\cf2 *\cf0 Py\cf2  - \cf0 m\cf2 *\cf0 Py\cf2 \
+\cf0 dDy\cf2  	= \cf0 m\cf2 *\cf0 Py\cf2  - \cf0 d\cf2 *\cf0 Dy\cf2  \
+\
+\cf0 Px\cf2  = \cf0 d\cf2 *\cf0 Dx\cf2 /\cf0 m\cf2 \
+\cf0 N1x\cf2  = \cf0 S1x\cf2  - \cf0 q1\cf2 *\cf0 d\cf2 *\cf0 Dx\cf2 *\cf0 Gx\cf2 /\cf0 m\cf2 /\cf0 e\cf2  + \cf0 q1\cf2 *\cf0 d\cf2 *\cf0 Dx\cf2 *\cf0 phi\cf2 /\cf0 e\cf2  - \cf0 DN\cf2 *(\cf0 N1x\cf2 -\cf0 N1y\cf2 )/\cf0 e\cf2 \
+\
+\
+\cf0 S1xp\cf2  = \cf0 q1\cf2 *\cf0 d\cf2 *\cf0 Dx\cf2 *\cf0 Gx\cf2 /\cf0 m\cf2 /\cf0 e\cf2  + \cf0 S1x\cf2  - \cf0 q1\cf2 *\cf0 d\cf2 *\cf0 Dx\cf2 *\cf0 Gx\cf2 /\cf0 m\cf2 /\cf0 e\cf2  + \cf0 q1\cf2 *\cf0 d\cf2 *\cf0 Dx\cf2 *\cf0 phi\cf2 /\cf0 e\cf2  - \cf0 DN\cf2 *(\cf0 N1x\cf2 -\cf0 N1y\cf2 )/\cf0 e\cf2 \
+\cf0 \
+delta1x\cf2  = \cf0 q1\cf2 *\cf0 d\cf2 *\cf0 Dx\cf2 *\cf0 Gx\cf2 /\cf0 m\cf2 /\cf0 e\cf2  - \cf0 q1\cf2 *\cf0 d\cf2 *\cf0 Dx\cf2 *\cf0 Gx\cf2 /\cf0 m\cf2 /\cf0 e\cf2  + \cf0 q1\cf2 *\cf0 d\cf2 *\cf0 Dx\cf2 *\cf0 phi\cf2 /\cf0 e\cf2  - \cf0 DN\cf2 *(\cf0 N1x\cf2 -\cf0 N1y\cf2 )/\cf0 e\cf2 \
+\cf0 \
+delta1x\cf2  = \cf0 q1\cf2 *\cf0 m\cf2 *\cf0 Px\cf2 *\cf0 phi\cf2 /\cf0 e\cf2  - \cf0 DN\cf2 *(\cf0 N1x\cf2 -\cf0 N1y\cf2 )/\cf0 e\cf2 \
+\
+\cf0 delta2x\cf2  = \cf0 q2\cf2 *\cf0 m\cf2 *\cf0 Px\cf2 *\cf0 phi\cf2 /\cf0 e\cf2  - \cf0 DN\cf2 *(\cf0 N2x\cf2 -\cf0 N2y\cf2 )/\cf0 e\cf2 \
+\
+\cf0 slope\cf2  = \cf0 delta2x\cf2 /\cf0 delta1x\cf2 \
+\
+\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
+\
+
+\f1\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs22 \cf2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
+% Simple model, no recycling and dispersal\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f1\fs24 \cf0 syms N1 N2 P \
+syms S1 S2 e\
+syms q1 q2 N1s N2s G m\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs22 \cf0 dN1\cf2  	= \cf0 e\cf2 *\cf0 S1\cf2  - \cf0 e\cf2 *\cf0 N1\cf2  - \cf0 q1\cf2 *a1*N1*\cf0 P/q1\cf2 \
+\cf0 dN2\cf2  	= \cf0 e\cf2 *\cf0 S2\cf2  - \cf0 e\cf2 *\cf0 N2\cf2  - \cf0 q2\cf2 *\cf0 a1*N2\cf2 *\cf0 P/q1\cf2 \
+\cf0 dP\cf2  		= a1*N1*\cf0 P\cf2  - \cf0 m\cf2 *\cf0 P\cf2 \
+
+\f1\fs24 \cf0 \
+eq = solve(dN1,dN2,dP,N1,N2,P)\
+\
+eqP = e*(S1*a1-m)/m/a1\
+\
+eqC1 = 
+\f0\fs22 e*(S1*a1-m)/a1
+\f1\fs24 \
+eqC1 = \
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs22 \cf2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\f1\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 % Full model\
+\
+syms N1x N2x N1y N2y Px Py Dx Dy\
+syms S1x S2x S1y S2y e\
+syms q1 q2 N1s N2s Gx Gy m a1 a2\
+syms d phi\
+syms DN1 DN2 DP DD\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs22 \cf0 dN1x\cf2  	= \cf0 e\cf2 *\cf0 S1x\cf2  - \cf0 e\cf2 *\cf0 N1x\cf2  - \cf0 q1\cf2 *\cf0 Gx\cf2 *\cf0 Px\cf2  + q1*\cf0 phi\cf2 *\cf0 d\cf2 *\cf0 Dx\cf2  - \cf0 DN1\cf2 *(\cf0 N1x\cf2 -\cf0 N1y\cf2 )\
+\cf0 dN2x\cf2  	= \cf0 e\cf2 *\cf0 S2x\cf2  - \cf0 e\cf2 *\cf0 N2x\cf2  - \cf0 q2\cf2 *\cf0 Gx\cf2 *\cf0 Px\cf2  + q2*\cf0 phi\cf2 *\cf0 d\cf2 *\cf0 Dx\cf2  - \cf0 DN2\cf2 *(\cf0 N2x\cf2 -\cf0 N2y\cf2 )\
+\cf0 dPx\cf2  	= \cf0 Gx\cf2 *\cf0 Px\cf2  - \cf0 m\cf2 *\cf0 Px\cf2  - \cf0 DP\cf2 *(\cf0 Px\cf2 -\cf0 Py\cf2 )\
+\cf0 dDx\cf2  	= \cf0 m\cf2 *\cf0 Px\cf2  - \cf0 d\cf2 *\cf0 Dx\cf2  - \cf0 DD\cf2 *(\cf0 Dx\cf2 -\cf0 Dy\cf2 )\
+		\
+\cf0 dN1y\cf2  	= \cf0 e\cf2 *\cf0 S1y\cf2  - \cf0 e\cf2 *\cf0 N1y\cf2  - \cf0 q1\cf2 *\cf0 Gy\cf2 *\cf0 Py\cf2  + q1*\cf0 phi\cf2 *\cf0 d\cf2 *\cf0 Dy\cf2  - \cf0 DN1\cf2 *(\cf0 N1y\cf2 -\cf0 N1x\cf2 )\
+\cf0 dN2y\cf2  	= \cf0 e\cf2 *\cf0 S2y\cf2  - \cf0 e\cf2 *\cf0 N2y\cf2  - \cf0 q2\cf2 *\cf0 Gy\cf2 *\cf0 Py\cf2  + q2*\cf0 phi\cf2 *\cf0 d\cf2 *\cf0 Dy\cf2  - \cf0 DN2\cf2 *(\cf0 N2y\cf2 -\cf0 N2x\cf2 )\
+\cf0 dPy\cf2  	= \cf0 Gy\cf2 *\cf0 Py\cf2  - \cf0 m\cf2 *\cf0 Py\cf2  - \cf0 DP\cf2 *(\cf0 Py\cf2 -\cf0 Px\cf2 )\
+\cf0 dDy\cf2  	= \cf0 m\cf2 *\cf0 Py\cf2  - \cf0 d\cf2 *\cf0 Dy\cf2  - \cf0 DD\cf2 *(\cf0 Dy\cf2 -\cf0 Dx\cf2 )\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
+\
+\
+\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
+% Case 1: Limitation by N1 on both patches, no dispersal of the producer \
+% eqN1x = N1s\
+% eqN1y = N1s\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
+\cf0 dN1x\cf2  	= \cf0 e\cf2 *\cf0 S1x\cf2  - \cf0 e\cf2 *\cf0 N1x\cf2  - q1*a1*N1x\cf0 /q1*Px\cf2  + q1*\cf0 phi\cf2 *\cf0 d\cf2 *\cf0 Dx\cf2  - \cf0 DN1\cf2 *(\cf0 N1x\cf2 -\cf0 N1y\cf2 )\
+\cf0 dN2x\cf2  	= \cf0 e\cf2 *\cf0 S2x\cf2  - \cf0 e\cf2 *\cf0 N2x\cf2  - \cf0 q2\cf2 *a1*N1x\cf0 /q1*Px\cf2  + q2*\cf0 phi\cf2 *\cf0 d\cf2 *\cf0 Dx\cf2  - \cf0 DN2\cf2 *(\cf0 N2x\cf2 -\cf0 N2y\cf2 )\
+\cf0 dPx\cf2  	= a1*N1x/q1*\cf0 Px\cf2  - \cf0 m\cf2 *\cf0 Px\cf2 \
+\cf0 dDx\cf2  	= \cf0 m\cf2 *\cf0 Px\cf2  - \cf0 d\cf2 *\cf0 Dx\cf2  - \cf0 DD\cf2 *(\cf0 Dx\cf2 -\cf0 Dy\cf2 )\
+		\
+\cf0 dN1y\cf2  	= \cf0 e\cf2 *\cf0 S1y\cf2  - \cf0 e\cf2 *\cf0 N1y\cf2  - q1*a1*N1y\cf0 /q1*Py\cf2  + q1*\cf0 phi\cf2 *\cf0 d\cf2 *\cf0 Dy\cf2  - \cf0 DN1\cf2 *(\cf0 N1y\cf2 -\cf0 N1x\cf2 )\
+\cf0 dN2y\cf2  	= \cf0 e\cf2 *\cf0 S2y\cf2  - \cf0 e\cf2 *\cf0 N2y\cf2  - \cf0 q2\cf2 *a1*N1y\cf0 /q1*Py\cf2  + q2*\cf0 phi\cf2 *\cf0 d\cf2 *\cf0 Dy\cf2  - \cf0 DN2\cf2 *(\cf0 N2y\cf2 -\cf0 N2x\cf2 )\
+\cf0 dPy\cf2  	= a1*N1y/q1*\cf0 Py\cf2   - \cf0 m\cf2 *\cf0 Py\cf2 \
+\cf0 dDy\cf2  	= \cf0 m\cf2 *\cf0 Py\cf2  - \cf0 d\cf2 *\cf0 Dy\cf2  - \cf0 DD\cf2 *(\cf0 Dy\cf2 -\cf0 Dx\cf2 )\
+\
+eq = solve(dN1x,dN2x,dPx,dDx,dN1y,dN2y,dPy,dDy,N1x,N2x,Px,Dx,N1y,N2y,Py,Dy)\
+\
+eqN1x	= eq.N1x(4)\
+eqN2x	= eq.N2x(4)\
+eqN1y	= eq.N1y(4)\
+eqN2y	= eq.N2y(4)\
+eqPx	= eq.Px(4)\
+eqPy	= eq.Py(4)\
+eqDx 	= eq.Dx(4)\
+eqDy 	= eq.Dy(4)\
+\
+\cf0 S1x_net = q1*\cf2 a1*eqN1x*eq\cf0 Px/e/q1 + eqN1x\
+S2x_net = q2*\cf2 a1*eqN1x*eq\cf0 Px/e/q1 + eqN2x\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 S1y_net = q1*\cf2 a1*eqN1y*eq\cf0 Py/e/q1 + eqN1y\
+S2y_net = q2*\cf2 a1*eqN1y*eq\cf0 Py/e/q1 + eqN2y\cf2 \
+\
+\
+eqN1x = q1*m/a1\
+eqN2x = -1/a1/q1*(-a1*e*S2x*q1+q2*e*S1x*a1-q2*e*q1*m-q1*a1*DN2*S2y-q1*a1*DN2*S2x+DN2*q2*S1x*a1-2*DN2*q2*q1*m+DN2*q2*S1y*a1)/(e+2*DN2)\
+eqN1y = q1*m/a1\
+eqN2y = (e*S2y*a1*q1-e*q2*S1y*a1+q2*e*q1*m+q1*a1*DN2*S2y+q1*a1*DN2*S2x-DN2*q2*S1x*a1+2*DN2*q2*q1*m-DN2*q2*S1y*a1)/a1/q1/(e+2*DN2)\
+\
+\cf0 S1x_net = -(S1x*a1-q1*m)/a1/(phi-1)+q1*m/a1\
+\
+S2x_net = -q2*(S1x*a1-q1*m)/a1/(phi-1)/q1-1/a1/q1*(-a1*e*S2x*q1+q2*e*S1x*a1-q2*e*q1*m-q1*a1*DN2*S2y-q1*a1*DN2*S2x+DN2*q2*S1x*a1-2*DN2*q2*q1*m+DN2*q2*S1y*a1)/(e+2*DN2)\
+\
+S1y_net = -(S1y*a1-q1*m)/a1/(phi-1)+q1*m/a1\
+\
+S2y_net = -q2*(S1y*a1-q1*m)/a1/(phi-1)/q1+(e*S2y*a1*q1-e*q2*S1y*a1+q2*e*q1*m+q1*a1*DN2*S2y+q1*a1*DN2*S2x-DN2*q2*S1x*a1+2*DN2*q2*q1*m-DN2*q2*S1y*a1)/a1/q1/(e+2*DN2)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf2 \
+\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
+% Case 2: Co-limitation by N1 and N2, no dispersal of the producer  \
+% eqN1x = N1s\
+% eqN2y = N2s\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 dN1x\cf2  	= \cf0 e\cf2 *\cf0 S1x\cf2  - \cf0 e\cf2 *\cf0 N1x\cf2  - q1*a1*N1x\cf0 /q1\cf2 *\cf0 Px\cf2  + q1*\cf0 phi\cf2 *\cf0 d\cf2 *\cf0 Dx\cf2  - \cf0 DN1\cf2 *(\cf0 N1x\cf2 -\cf0 N1y\cf2 )\
+\cf0 dN2x\cf2  	= \cf0 e\cf2 *\cf0 S2x\cf2  - \cf0 e\cf2 *\cf0 N2x\cf2  - \cf0 q2\cf2 *a1*N1x\cf0 /q1\cf2 *\cf0 Px\cf2  + q2*\cf0 phi\cf2 *\cf0 d\cf2 *\cf0 Dx\cf2  - \cf0 DN2\cf2 *(\cf0 N2x\cf2 -\cf0 N2y\cf2 )\
+\cf0 dPx\cf2  	= a1*N1x/q1*\cf0 Px\cf2  - \cf0 m\cf2 *\cf0 Px\cf2 \
+\cf0 dDx\cf2  	= \cf0 m\cf2 *\cf0 Px\cf2  - \cf0 d\cf2 *\cf0 Dx\cf2  - \cf0 DD\cf2 *(\cf0 Dx\cf2 -\cf0 Dy\cf2 )\
+		\
+\cf0 dN1y\cf2  	= \cf0 e\cf2 *\cf0 S1y\cf2  - \cf0 e\cf2 *\cf0 N1y\cf2  - q1*a2*N2y\cf0 /q2\cf2 *\cf0 Py\cf2  + q1*\cf0 phi\cf2 *\cf0 d\cf2 *\cf0 Dy\cf2  - \cf0 DN1\cf2 *(\cf0 N1y\cf2 -\cf0 N1x\cf2 )\
+\cf0 dN2y\cf2  	= \cf0 e\cf2 *\cf0 S2y\cf2  - \cf0 e\cf2 *\cf0 N2y\cf2  - \cf0 q2\cf2 *a2*N2y\cf0 /q2\cf2 *\cf0 Py\cf2  + q2*\cf0 phi\cf2 *\cf0 d\cf2 *\cf0 Dy\cf2  - \cf0 DN2\cf2 *(\cf0 N2y\cf2 -\cf0 N2x\cf2 )\
+\cf0 dPy\cf2  	= a2*N2y/q1*\cf0 Py\cf2   - \cf0 m\cf2 *\cf0 Py\cf2 \
+\cf0 dDy\cf2  	= \cf0 m\cf2 *\cf0 Py\cf2  - \cf0 d\cf2 *\cf0 Dy\cf2  - \cf0 DD\cf2 *(\cf0 Dy\cf2 -\cf0 Dx\cf2 )\
+\
+eq = solve(dN1x,dN2x,dPx,dDx,dN1y,dN2y,dPy,dDy,N1x,N2x,Px,Dx,N1y,N2y,Py,Dy)\
+\
+eqN1x	= eq.N1x(4)\
+eqN2x	= eq.N2x(4)\
+eqN1y	= eq.N1y(4)\
+eqN2y	= eq.N2y(4)\
+eqPx	= eq.Px(4)\
+eqPy	= eq.Py(4)\
+eqDx 	= eq.Dx(4)\
+eqDy 	= eq.Dy(4)\
+\
+\cf0 S1x_net = q1*\cf2 a1*eqN1x*eq\cf0 Px/e/q1 + eqN1x\
+S2x_net = q2*\cf2 a1*eqN1x*eq\cf0 Px/e/q1 + eqN2x\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 S1y_net = q1*\cf2 a2*eqN1y*eq\cf0 Py/e/q1 + eqN1y\
+S2y_net = q2*\cf2 a2*eqN1y*eq\cf0 Py/e/q1 + eqN2y\cf2 \
+\
+\
+eqN1x = q1*m/a1\
+\
+eqN2x = -(-q1^2*a1*DN2*m+q1^2*a1*DN1*m-2*a2*q2*DN1*q1*m-q1*a1*DN1*S2x*a2-q1*a1*DN1*S2y*a2-q1*a1*e*S2x*a2-a2*e*q2*q1*m+a2*e*q2*S1x*a1+a2*q2*DN1*S1x*a1+a2*q2*DN1*S1y*a1)/a2/(e+DN2+DN1)/a1/q1\
+\
+eqN1y = -(-2*q1^2*a1*DN2*m-e*q1^2*a1*m+q1*a1*DN2*S2x*a2+q1*a1*S2y*a2*DN2+e*q1*a1*S2y*a2+DN2*a2*q2*q1*m-DN2*a2*q2*S1y*a1-e*a2*q2*S1y*a1-DN2*a2*q2*S1x*a1-a2*q2*DN1*q1*m)/a1/q2/(e+DN2+DN1)/a2\
+\
+eqN2y = q1*m/a2\
+\
+\cf0 S1x_net = -(2*q1^2*a1*DN1*DN2*m+e*q1^2*a1*DN1*m-q1*a1*DN1*DN2*S2x*a2-2*q1*e*a2*q2*DN1*m-DN2*a2*e*q2*q1*m-q1*e^2*a2*q2*m-q1*a1*DN1*S2y*a2*DN2-e*q1*a1*DN1*S2y*a2-2*DN2*a2*q2*DN1*q1*m+DN2*a2*q2*DN1*S1y*a1+e*a2*q2*DN1*S1x*a1+DN2*a2*e*q2*S1x*a1+e*a2*q2*DN1*S1y*a1+e^2*a2*q2*S1x*a1+DN2*a2*q2*DN1*S1x*a1)/a2/(e+DN2+DN1)/a1/(phi-1)/q2/e+q1*m/a1\
+\
+\
+S2x_net = -(2*q1^2*a1*DN1*DN2*m+e*q1^2*a1*DN1*m-q1*a1*DN1*DN2*S2x*a2-2*q1*e*a2*q2*DN1*m-DN2*a2*e*q2*q1*m-q1*e^2*a2*q2*m-q1*a1*DN1*S2y*a2*DN2-e*q1*a1*DN1*S2y*a2-2*DN2*a2*q2*DN1*q1*m+DN2*a2*q2*DN1*S1y*a1+e*a2*q2*DN1*S1x*a1+DN2*a2*e*q2*S1x*a1+e*a2*q2*DN1*S1y*a1+e^2*a2*q2*S1x*a1+DN2*a2*q2*DN1*S1x*a1)/a2/(e+DN2+DN1)/a1/(phi-1)/e/q1-(-q1^2*a1*DN2*m+q1^2*a1*DN1*m-2*a2*q2*DN1*q1*m-q1*a1*DN1*S2x*a2-q1*a1*DN1*S2y*a2-q1*a1*e*S2x*a2-a2*e*q2*q1*m+a2*e*q2*S1x*a1+a2*q2*DN1*S1x*a1+a2*q2*DN1*S1y*a1)/a2/(e+DN2+DN1)/a1/q1\
+\
+\
+S1y_net = -(-2*q1^2*a1*DN2*m-e*q1^2*a1*m+q1*a1*DN2*S2x*a2+q1*a1*S2y*a2*DN2+e*q1*a1*S2y*a2+DN2*a2*q2*q1*m-DN2*a2*q2*S1y*a1-e*a2*q2*S1y*a1-DN2*a2*q2*S1x*a1-a2*q2*DN1*q1*m)/a1^2/q2/(e+DN2+DN1)/m*(q1*a1*e^2*S2y*a2-q1^2*a1*e^2*m+e*q1*a1*DN1*S2y*a2-e*q1^2*a1*DN1*m+2*DN2*a2*q2*DN1*q1*m-DN2*a2*e*q2*S1x*a1+q1*a1*e*S2y*a2*DN2+q1*a1*DN2*e*S2x*a2-2*q1^2*a1*DN2*e*m+DN2*a2*e*q2*q1*m-DN2*a2*q2*DN1*S1y*a1-2*q1^2*a1*DN1*DN2*m+q1*a1*DN1*DN2*S2x*a2-DN2*a2*q2*DN1*S1x*a1+q1*a1*DN1*S2y*a2*DN2)/a2/(q1*e-q2*phi*e-DN1*q2*phi-DN2*q2*phi+q1*DN2+DN1*q1)/e/q1-(-2*q1^2*a1*DN2*m-e*q1^2*a1*m+q1*a1*DN2*S2x*a2+q1*a1*S2y*a2*DN2+e*q1*a1*S2y*a2+DN2*a2*q2*q1*m-DN2*a2*q2*S1y*a1-e*a2*q2*S1y*a1-DN2*a2*q2*S1x*a1-a2*q2*DN1*q1*m)/a1/q2/(e+DN2+DN1)/a2\
+\
+\
+S2y_net = -(-2*q1^2*a1*DN2*m-e*q1^2*a1*m+q1*a1*DN2*S2x*a2+q1*a1*S2y*a2*DN2+e*q1*a1*S2y*a2+DN2*a2*q2*q1*m-DN2*a2*q2*S1y*a1-e*a2*q2*S1y*a1-DN2*a2*q2*S1x*a1-a2*q2*DN1*q1*m)/a1^2/(e+DN2+DN1)/m*(q1*a1*e^2*S2y*a2-q1^2*a1*e^2*m+e*q1*a1*DN1*S2y*a2-e*q1^2*a1*DN1*m+2*DN2*a2*q2*DN1*q1*m-DN2*a2*e*q2*S1x*a1+q1*a1*e*S2y*a2*DN2+q1*a1*DN2*e*S2x*a2-2*q1^2*a1*DN2*e*m+DN2*a2*e*q2*q1*m-DN2*a2*q2*DN1*S1y*a1-2*q1^2*a1*DN1*DN2*m+q1*a1*DN1*DN2*S2x*a2-DN2*a2*q2*DN1*S1x*a1+q1*a1*DN1*S2y*a2*DN2)/q1^2/a2/(q1*e-q2*phi*e-DN1*q2*phi-DN2*q2*phi+q1*DN2+DN1*q1)/e+q1*m/a2\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf2 \
+\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf2 \
+\
+\
+}
