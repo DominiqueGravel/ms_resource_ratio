@@ -1,13 +1,7 @@
 % TO DO
 % schematic representation of the model
-% definition of phi: lost during mineralization process (not an inorganic nutrient, to avoid confusion with eN)
-% qij missing in Eq. 6
-% eq 9: replace l by phi, and add qij, and replace N by P
-% Localisation of the net supply point on Fig. 1
 % Eq. 12: add the two coordinates in the text
 % Vérifier la présence des chapeaux aux équations
-% Explication modèle local: préciser que ça correspond aux équations sans les deltas
-% 
 
 \documentclass[letterpaper,twocolumn,showkeys]{revtex4-1}
 \usepackage[utf8]{inputenc}
@@ -122,7 +116,7 @@ The conditions for coexistence of primary producer species competing for two res
 
 The external supply point $S$ represents the equilibrium nutrient concentration in the system in absence of this primary producer (no consumption – Fig. 1A). The zero net growth isocline ($ZNGI_i$) represents the combination of the two nutrient levels ($N_{j}^*$) at which the growth of primary producer $i$ is null. The growth of the primary producer is possible only if the supply point is located above the $ZNGI_i$. 
 
-The use of vectors is a convenient tool to understand the dynamics of the system and its equilibrium state. The mass balance constraint implies the system will satisfy the following conditions at equilibrium (denoted by the hat, assuming no dispersal):
+The use of vectors is a convenient tool to understand the dynamics of the system and its equilibrium state. The mass balance constraint implies the system will satisfy the following conditions at equilibrium for a resident species $i$ (denoted by the hat, assuming no dispersal):
 
 %-----------------%
 \begin{equation}
@@ -137,7 +131,7 @@ The use of vectors is a convenient tool to understand the dynamics of the system
 
 \begin{equation}
 	\label{e:bnet}
-	S_{jx}-e\widehat{N}_{jx}=\sum_{i=1}^{s}q_{ij}\widehat{G}_{ix}\widehat{P}_{ix}-\sum_{i=1}^{s}r(1-l)\widehat{D}_{ix}
+	S_{jx}-e\widehat{N}_{jx}=q_{ij}\widehat{G}_{ix}\widehat{P}_{ix}-r(1-\phi)q_{ij}\widehat{D}_{ix}
 \end{equation}
 %-----------------%
 
@@ -166,18 +160,18 @@ where $\overrightarrow{u'}_{x}$ is an altered nutrient supply vector. The consum
 %-----------------%
 \begin{equation}
 	\label{e:bnet}
-	S'_{jx}=\sum_{i=1}^{s}q_{ij}G_{ix}\widehat{P}_{ix}e^{-1}+\widehat{N}_{jx}
+	S'_{jx}= S_{jx} + r(1-\phi)q_{ij}\widehat{D}_{ix} = q_{ij}G_{ix}\widehat{P}_{ix}+e\widehat{N}_{jx}
 \end{equation}
 %-----------------%
 
-The location of the net supply point $S'$ will simply be a translation of the original supply point $S$ along the projection of the consumption vector when the mineralization of the detritus returns nutrients to the inorganic pool in the same proportion than they are sequestered in the biomass (i.e. following the quota $q_{i}$, Daufresne and Hedin, 2005). 
+The location of the net supply point $S'$ will be a translation of the original supply point $S$ along the projection of the consumption vector (the right hand side of the Eq. 12 is responsible to the displacement). This situation occurs because we assume that the mineralization of the detritus returns nutrients to the inorganic pool in the same proportion than they are sequestered in the biomass (i.e. following the quota $q_{i}$, Daufresne and Hedin, 2005). 
 
 	The location of the net nutrient supply point $S'$ is crucial to understand the impacts of nutrient cycling and diffusion on coexistence. Remember the criterion for coexistence in the classical resource-ratio theory is that i) the supply point must be located between the projection of the consumption vectors of the competing species (Fig. 1B) and ii) that species are more limited by the resource they consume the most (in other words, the species with the uppermost ZNGI also has the steepest consumption vector). The addition of nutrient recycling alters this condition: it is the net nutrient supply point $S'$ that must be located between the projection of the consumption vectors in order to have coexistence (Daufresne and Hedin, 2005). 
 
 %========================================================%
 \section{Metaecosystem dynamics}
 
-In this section we now analyse the impacts of spatial flows between two ecosystems on the equilibrium inorganic nutrient concentration in the presence of a single resident primary producer. We focus on the location of the net supply point because it is central to understand invasion conditions (equilibrium inorganic nutrient concentration) and thus coexistence in both locations. Stable coexistence between two species will be possible when each of them has a positive per capita growth rate when at low abundance (Chesson, 2000; Gravel et al. 2011). In terms of graphical representation of the dynamics, it means that the equilibrium nutrient concentration of each species when resident will be above the ZNGI of the invader. We study each spatial flow independently, even though they are likely to be colinear in nature, in order to distinguish their isolated effect on coexistence. We finish with the analysis of a special case where spatial flows and nutrient recycling promote unstable coexistence (alternate stable states) between two competing species. The analysis is essentially derived from a graphical interpretation of equilibrium vectors.
+In this section we now analyse the impacts of spatial flows between two ecosystems on the equilibrium inorganic nutrient concentration in the presence of a single resident primary producer. We focus on the location of the net supply point because it is central to understand invasibility conditions (equilibrium inorganic nutrient concentration) and thus coexistence in both locations. Stable coexistence between two species will be possible when each of them has a positive per capita growth rate when at low abundance (Chesson, 2000; Gravel et al. 2011). In terms of graphical representation of the dynamics, it means that the equilibrium nutrient concentration of each species when resident will be above the ZNGI of the invader. We study each spatial flow independently, even though they are likely to be colinear in nature, in order to distinguish their isolated effect on coexistence. We finish with the analysis of a special case where spatial flows and nutrient recycling promote unstable coexistence (alternate stable states) between two competing species. The analysis is essentially derived from a graphical interpretation of equilibrium vectors because equilibrium states are algeabrically too complex to be informative.
 
 %===============================%
 \subsection{Case 1: Detritus diffusion}
@@ -190,40 +184,29 @@ In this section we now analyse the impacts of spatial flows between two ecosyste
    \label{f:Detritus}
 \end{figure}
 
-Because we assume passive diffusion, the detritus will flow from the most productive location to the least productive one (Gravel et al., 2010a,b). The equilibrium total biomass of the producer at a location, and consequently the detritus biomass producer, is easily found on the two-dimensional space of nutrients (Fig. 2). The biomass will be proportional to the distance between the net supply point and the equilibrium inorganic nutrient concentration (in absence of diffusion). 
-% Give an explanation by refering to equation 6 (by isolating P)
-% Will be proportional to the difference between S and eqN and to D,
-% Where based on Eq. 5, D is proportional to P
+Because we assume passive diffusion, the detritus will flow from the most productive location to the least productive one (Gravel et al., 2010a,b). The equilibrium total biomass of the producer at a location, and consequently the detritus biomass, is easily found on the two-dimensional space of nutrients (Fig. 2). Isolating $P_{ix}$ at Eq. 6 tells us it will be proprotion to the difference between the nutrient supply point$S$ and the equilibrium nutrient concentration $\widehat{N}$, in other words to the distance between the supply point and the ZNGI. The equilibrium $P_{ix}$ is also proportional to total detritus biomass and the recycling rate. 
 
-For instance, at Fig 2, the equilibrium producer and detritus biomass will be larger at the grey location (the most productive combinations of the two resources) than the black location (the least productive). Because it is passive, diffusion between the two locations has an averaging effect, meaning that it will tend to homogenize the detritus compartments from the two locations. Detritus will move from the most productive (grey) to the least productive (black) location. Consequently the net supply rate of both nutrients increases at the least productive location  while it decreases at the least productive location. The movement of the net supply point still follows however the projection of the consumption vector because the two nutrients are exchanged between the location exactly in the same proportion they are consumed (the quota of the detritus is the same as the quota of the producer). The equilibrium inorganic nutrient concentration thus remains unchanged by spatial flows of detritus, and consequently coexistence is neither promoted or impeded by detritus flows.
+We illustrat and example at Fig 2, where the equilibrium producer and detritus biomass will be larger at the grey location (the most productive combinations of the two resources) and lower at the black location (the least productive). Because diffusion between the two locations is passive, it has an averaging effect, meaning that it will tend to homogenize the detritus compartments from the two locations. Detritus will move from the most productive (grey) to the least productive (black) location. Consequently the net supply rate of both nutrients increases at the least productive location  while it decreases at the least productive location. The movement of the net supply point still follows however the projection of the consumption vector because the two nutrients are exchanged between the location exactly in the same proportion they are consumed (the quota of the detritus is the same as the quota of the producer). The equilibrium inorganic nutrient concentration thus remains unchanged by spatial flows of detritus, and consequently coexistence is neither promoted or impeded by detritus flows.
 
-	This result is easily shown with a simple derivation of the model. We calculate the displacement of the supply point ($\Delta S_{jx}$) of nutrient $j$ at location $x$ by comparing Eq. 10 and 11 and find:
+	This result is supported by a simple derivation of the model. We calculate the displacement of the supply point ($\Delta S_{jx} = S_{jx}  - S'_{jx}$) of nutrient $j$ at location $x$ after adding diffusion based on Eqs 6 and 12 and find:
 
 %-----------------%
 \begin{equation}
 	\label{e:bnet}
-	\Delta S_{jx}=q_{j}\phi r\widehat{D}_{x}e^{-1}
+	\Delta S_{jx}=q_{j}r(1-\phi)\widehat{D}_{x}
 \end{equation}
 %-----------------%
-% La dérivation du delta n'est pas super claire. Pourquoi le delta est disparu?
-% Mentionner qu'il se retrouve dans la définition de Delta chapeau
-% Le rendre explicite dans l'équation, comme c'est le cas pour les nutriments
 
-What is interesting is to understand if the position of the net supply point of one nutrients is more important than the other one. Taking the ratio of deltas (the slope of the displacement vector) yields a result between 0 (only the supply point of nutrient 2 is moving) and infinity (only the supply point of nutrient 1 is moving). Any ratio different from the slope of the consumption vector indicates a differential movement susceptible to influence coexistence. Considering the two nutrients, we find that the slope of the change (see Fig 1) is:
+The effect of diffusion on the $\Delta S_{jx}$ is encapsulated in the equilibrium detritus biomass $\widehat{D}_x$. The solution to this quantity is not informative, but we could guess that it will decrease with diffusion at the most productive location and the increase at the other one. We will see below that at the end it does not matter for coexistence. What is more interesting is to understand if the position of the net supply point of one nutrient is more important than the other one. Taking the ratio of deltas (the slope of the displacement vector) yields a result between 0 (only the supply point of nutrient 2 is moving) and infinity (only the supply point of nutrient 1 is moving). Any ratio different from the slope of the consumption vector indicates a differential movement susceptible to influence coexistence. Considering the two nutrients, we find that this slope (see Fig 1) is:
 
 %-----------------%
 \begin{equation}
 	\label{e:bnet}
-	Slope=\frac{q_{2}\phi r\widehat{D}_{x}e^{-1}}{q_{1}\phi r\widehat{D}_{x}e^{-1}}=\frac{q_{2}}{q_{1}}
+	Slope=\frac{q_{i2}r(1-\phi) \widehat{D}_{x}}{q_{i1}r(1-\phi) \widehat{D}_{x}}=\frac{q_{i2}}{q_{i1}}
 \end{equation}
 %-----------------%
 
-which corresponds to the slope of the consumption vector (the ratio of quotas). Altough it does not influence stable coexistence, the spatial flow of detritus promotes unstable coexistence if the displacement of the net supply point from the original supply point is crossing the projection of an inferior competitor toward the coexistence area (see below in the section "Alternate stable states"), or alternatively it could lead to competitive exclusion if it moves in the opposite situation. 
-% Ce paragraphe finit la section de façon abrupte avec un lien rapide sur la coexistence
-% Lien avec le cone de coexistence à la figure 1.
-% Donne l'impression que la coexistence ne sera pas traitée davantage
-% Anticiper un peu ce qui se trouve à la section suivante.
-% Ou bien aller encore moins loin
+which corresponds to the slope of the consumption vector (the ratio of quotas). As we see from this equationDetritus diffusion does not influence stable coexistence because the equilibrium nutrient concentration will be unchanged. It could however promotes unstable coexistence if the displacement of the net supply point from the original supply point is crossing the projection of an inferior competitor toward the coexistence area, or alternatively it could lead to competitive exclusion if it moves in the opposite situation (see below in the section "Alternate stable states"). 
 
 %===============================%
 \subsection{Case 2: Nutrient Dispersal}
@@ -235,26 +218,23 @@ which corresponds to the slope of the consumption vector (the ratio of quotas). 
    \label{f:Nutrients}
 \end{figure}
 
-% Ajouter les vecteurs sur la figure, ajouter les flèches pour montrer les déplacements des supply points
-% Les légendes sont violentes -- eg définition des N* dans le texte (au moment où on définit les ZNGI)
+The impact of nutrient diffusion on coexistence is somewhat more complicated that detritus because the two nutrients are not necessarily exchanged at the same rates between locations, and thus influencing their stoichiometry. The impact of nutrient diffusion on the equilibrium differs if the primary producer is limited by the same nutrient in the two locations, or by different nutrients, but the general principle remains the same (the latter is illustrated at Fig. 3): each of the inorganic nutrient will flow from the location with highest concentration to the location with the lowest (Gravel et al. 2010a), which will result in a spatial homogeneization of the net supply points. In other words, the net supply points will get closer in the two-dimensional space with increasing diffusion rate. At Fig. 3 for instance, the nutrient 1 has a greater concentration in the grey patch and will consequently flow toward the black patch (and the opposite for nutrient 2). The grey patch will thus be enriched in nutrient 2, while the black patch in nutrient 1. More generally, in the situation where the same nutrient is limiting the producer at the two locations, the location with the highest supply rate of the non-limiting nutrient will be the net exporter of that nutrient and the other location will be the net importer. Consequently the net supply point, the equilibrium nutrient concentration and the biomass will be more similar with increasing diffusion. In the situation where different nutrients are limiting the producer in the two locations, one nutrient will be exported (the non-limiting one) and one nutrient will be imported (the limiting one) at each location. Diffusion will also homogenize all other compartments in this situation. 
 
-The impact of nutrient diffusion on coexistence is somewhat more complicated because the two nutrients are not necessarily exchanged in the same ratio between locations. The results differ if the primary producer is limited by the same nutrient in the two locations, or by different nutrients, but the general principle remains the same (the latter is illustrated at Fig. 3): each of the inorganic nutrient will flow from the location with highest concentration to the location with the lowest (Gravel et al. 2010a), which will result in a spatial homogeneization of the net supply points. In other words, the net supply points will get closer in the two-dimensional space with increasing diffusion rate. At Fig. 3 for instance, the nutrient 1 has a greater concentration in the grey patch and will consequently flow toward the black patch (and the opposite for nutrient 2). The grey patch will thus be enriched in nutrient 2, while the black patch in nutrient 2. More generally, in the situation where the same nutrient is limiting the producer at the two locations, the location with the highest supply rate of the non-limiting nutrient will be the net exporter of that nutrient and the other location will be the net importer. Consequently the net supply point, the equilibrium nutrient concentration and the biomass will be more similar with increasing diffusion. In the situation where different nutrients are limiting the producer in the two locations, one nutrient will be exported (the non-limiting one) and one nutrient will be imported (the limiting one) at each location. Diffusion will also homogenize all compartments in this situation. 
-
-	The equilibrium solution to the situation of nutrient dispersal is more complicated than for detritus, but still provides interpretable predictions.The displacement of the net supply point relative to the original supply point in this situation is:
+	The equilibrium solution to the situation of nutrient dispersal is more complicated than for detritus, but still provides interpretable predictions. The displacement of the net supply point relative to the original supply point in this situation is:
 
 %-----------------%
 \begin{equation}
 	\label{e:bnet}
-	\Delta S_{jx}=q_{j}\phi m\widehat{P}_{x}^{-1}-\Delta_{Nx}
+	\Delta S_{jx}=q_{ij}(1-\phi) m\widehat{P}_{x}^{-1}-\Delta_{Nx}
 \end{equation}
 %-----------------%
 
-And thus the slope of the change for the supply point at location $x$ is:
+which in this case is clearly influenced by diffusion. Thhe slope of the change for the supply point at location $x$ is consequently:
 
 %-----------------%
 \begin{equation}
 	\label{e:bnet}
-	Slope=\frac{q_{2}\phi m\widehat{P}_{x}^{-1}-d_{N}(\widehat{N}_{2x}-\widehat{N}_{2y})}{q_{1}\phi m\widehat{P}_{x}^{-1}-d_{N}(\widehat{N}_{1x}-\widehat{N}_{1y})}
+	Slope=\frac{q_{i2}(1-\phi) m\widehat{P}_{x}^{-1}-d_{N}(\widehat{N}_{2x}-\widehat{N}_{2y})}{q_{i1}(1-\phi) m\widehat{P}_{x}^{-1}-d_{N}(\widehat{N}_{1x}-\widehat{N}_{1y})}
 \end{equation}
 %-----------------%
 
@@ -267,7 +247,7 @@ And thus the slope of the change for the supply point at location $x$ is:
 \end{equation}
 %-----------------%
 
-This equation is not complete in absence of the equilibrium inorganic nutrient concentrations, but these could be easily obtained from a graphical interpretation of equilibrium states (such as Fig. 3). As mentionned above, the relative position of the inorganic nutrient concentration at the two locations in absence of diffusion could be obtained graphically, and then the direction of the flow for each nutrient determined. Equation 17 nonetheless confirms the above interpretation of source and sink dynamics (Gravel et al. 2010a): the slope of the change will be positive (enrichment for both nutrients) when the focal location is a sink for both nutrients and negative when the location is a sink for one nutrient and a source for the other.
+This equation is incomplete in absence of the equilibrium inorganic nutrient concentrations, but these could be easily obtained from a graphical interpretation of equilibrium states (such as Fig. 3). As mentionned above, the relative position of the inorganic nutrient concentration at the two locations in absence of diffusion could be obtained graphically, and then the direction of the flow for each nutrient determined. Equation 17 nonetheless confirms the above interpretation of source and sink dynamics (Gravel et al. 2010a): the slope of the change will be positive (enrichment for both nutrients) when the focal location is a sink for both nutrients and negative when the location is a sink for one nutrient and a source for the other.
 
 %===============================%
 \subsection{Case 3: Producer dispersal}
@@ -279,7 +259,7 @@ This equation is not complete in absence of the equilibrium inorganic nutrient c
    \label{f:Producers}
 \end{figure}
 
-The dispersal of the primary producer has two effects on the equilibrium states of the metaecosystem. First, because there is a transfer of biomass from the most productive to the least productive location, it enriches the importing location exactly the same as we observed above for the diffusion of the detritus. But the most fundamental effect, and consequently for spatial dynamics and competitive interactions, is the source-sink dynamics and alteration of competitive hierarchies (Loreau and Mouquet, 1999). The primary producers is exported from the source patch (a negative effect on the growth rate) and imported to the sink patch (a positive effect). Because producers are leaving the source patch, the net effect is similar to an inflated mortality rate. It thus decreases the equilibrium population size in the source patche and consequently increases the inorganic nutrient availability. In other words, the $N^*_{ij}$ for the limiting resource will increase in the source patch. Alternatively, it will decrease in the sink patch. We illustrate this effect on the two resource space as lateral movements of the $ZNGIs$ (Fig. 4).
+The dispersal of the primary producer has two effects on the equilibrium states of the metaecosystem. First, because there is a transfer of biomass from the most productive to the least productive location, it enriches the importing location exactly the same as we observed above for the diffusion of the detritus. But the most fundamental effect, and consequently for spatial dynamics and competitive interactions, is the alteration of competitive hierarchies (Loreau and Mouquet, 1999). The primary producer is exported from the source patch (which has a negative effect on the per capita growth rate) to the sink patch (which has a positive effect). Because producers are leaving the source patch, the net effect is similar to an inflated mortality rate. It thus decreases the equilibrium population size in the source and consequently increases the inorganic nutrient availability. In other words, the $N^*_{ij}$ for the limiting resource will increase in the source patch. Alternatively, it will decrease in the sink patch. We illustrate this effect on the two resource space as lateral movements of the $ZNGIs$ (Fig. 4).
 
 Again, the solution for the equilibrium states under producer dispersal is too complicated to be informative (but see Ryberg and Blasius, 2011 for an elegant derivation of the invader nullcline). But we could still obtain interpretable results with the assistance of the graphical representation of the metaecosystem dynamics. First, we need to specific a functional response for nutrient uptake by primary producer. For simplicity, without loss of generality, we will assume a simple linear functional response of the form $g_{ij} = \beta_{ij}N_{jx}$, where $\beta_{ij}$ is the per capita consumption rate of nutrient $j$ by species $i$. Solving Eq. 7 for the equilibrium nutrient availability, we find:
 
@@ -290,7 +270,7 @@ Again, the solution for the equilibrium states under producer dispersal is too c
 \end{equation}
 %-----------------%
 
-It is easy to see the impact of source and sink dynamics on the equilibrium $N^{*}_{j}$ from this equation. The difference between producer densities will take a positive value for a source (by definition, $P_x>P_y$) and consequently $N^{*}_{j}$ will increase. At the opposite, $N^{*}_{j}$ will decrease for a sink where the difference is negative ($P_x<P_y$). Paradoxally, source and sink dynamics heterogenizes the ZNGI of a single species across the landscape (Fig 4), while it homogenizes the overall competitivity of the species at the regional scale (Mouquet and Loreau, 2002). It is thus difficult to see any general trend on coexistence, producer dispersal could either promote or prevent coexistence at the local scale. But eventually it will reduce coexistence at the regional scale because the most competitive species at the regional scale will exclude all other species (Mouquet and Loreau, 2002; Mouquet et al. 2006).  
+It is easy to see the impact of source and sink dynamics on the equilibrium $N^{*}_{j}$ from this equation. The difference between producer densities will take a positive value for a source (by definition, $P_x>P_y$) and consequently $N^{*}_{j}$ will increase. At the opposite, $N^{*}_{j}$ will decrease for a sink where the difference is negative ($P_x<P_y$). Paradoxally, source and sink dynamics heterogenize the ZNGI of a single species across the landscape (Fig 4), while it homogenizes the overall competitivity of the species at the regional scale (Mouquet and Loreau, 2002). It is thus difficult to see any general impact on coexistence, producer dispersal could either promote or prevent coexistence at the local scale. But eventually it will reduce coexistence at the regional scale because the most competitive species at that scale will exclude all other ones (Mouquet and Loreau, 2002; Mouquet et al. 2006).  
 
 %===============================%
 \subsection{Alternate stable states}
@@ -302,20 +282,20 @@ It is easy to see the impact of source and sink dynamics on the equilibrium $N^{
    \label{f:ASS}
 \end{figure}
 
-Detritus diffusion is a special case that could lead to alternate stable states. It is particular with respect to other spatial flows because it contributes to the displacement of the supply point, but it does not affect the equilibrium inorganic nutrient concentration (see above). Consequently, as the supply point moves from the original location to the net location with increasing diffusion and the build up of the detritus pool, it could cross the projection of the consumption vector of an inferior competitor (Fig. 5). If such situation happens, locally stable coexistence could occur (local stability was confirmed by numerical analysis). Coexistence is however not globally stable, as it is not possible for the inferior competitor to invade when the superior competitor is resident. This situation is best exemplified by Fig. 5. We see on that figure that both species will be able to develop a sustained population at both locations. In absence of detritus dispersal, however, only the red species will be able to invade both locations when the other species is resident. The blue species will not be able to invade the patch 2 because the equilibrium nutrient concentration is below its ZNGI. Detritus dispersal moves the location of the supply points, and consequently the net supply point of location 2 in presence of the blue species crosses the projection of the consumption vector of the red species. In this situation, if the red species invade, the availability of the nutrient 2 will be held constant (because of the blue species limitation) and the availability of the nutrient one will decrease to eventually reach the point where the two ZNGIs cross. Coexistence at this location could stand small perturbations but not large ones. There thus two alternate locally stable states: one with coexistence of both species and one with only the red species. We could also think about a situation where both supply points lie outside the triangle made by the projection of the consumption vectors and detritus dispersal bring them within it. Three alternate stables would be possible in this situation. 
+Detritus diffusion is a special case that could potentially lead to alternate stable states. It is particular with respect to other spatial flows because it contributes to the displacement of the supply point, but it does not affect the equilibrium inorganic nutrient concentration (see above). Consequently, as the supply point moves from the original location to the net location with increasing diffusion and the build up of the detritus pool, it could cross the projection of the consumption vector of an inferior competitor (Fig. 5). If such a situation happens, locally stable coexistence could occur (local stability was confirmed by numerical analysis; the search of the parameter space does not however garantee that it will always be stable). Coexistence is however not globally stable, as it is not possible for the inferior competitor to invade when the superior competitor is resident. This situation is best exemplified at Fig. 5. We see on that figure that both species will be able to develop a sustained population at both locations. In absence of detritus dispersal, however, only the red species will be able to invade both locations when the other species is resident. The blue species will not be able to invade the patch 2 because the equilibrium nutrient concentration is below its ZNGI. Detritus dispersal moves the location of the supply points, and consequently the net supply point of location 2 in presence of the blue species crosses the projection of the consumption vector of the red species. In this situation, if the red species invade, the availability of the nutrient 2 will be held constant (because of the blue species limitation) and the availability of the nutrient one will decrease to eventually reach the point where the two ZNGIs cross. Coexistence at this location could stand small perturbations but not large ones. There are thus two alternate locally stable states: one with coexistence of both species and one with only the red species. We could also think about a situation where both supply points lie outside the triangle made by the projection of the consumption vectors and detritus dispersal bring them within it. Three alternate stables would be possible in this situation. 
 
 \section{Discussion}
 
+\begin{itemize}
+\item Main results: detritus diffusion does not significantly impact coexistence; nutrient diffusion does homogenizes the metaco
 
-Metaecosystems could be very complicated.
+\item Coming back to Tilman 1982: should the prediction hold?
 
-Here we show noentheless that mechanisms remains fairly simple
-Not really new coexistence mechanism, but still ....
-
-
-
+\item Comparison between systems: terrestrial --> low dN, high dP and dD; aquatic: high dN, various dP; low dD;
+\end{itemize}
 
 
 \section{Acknowledgments}
+NIMBIOS, NSERC, CRC
 
 \end{document}

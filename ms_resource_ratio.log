@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  5 NOV 2013 10:26
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  5 NOV 2013 14:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -489,12 +489,12 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip48
 )
-Class revtex4-1 Info: Patching array package. on input line 16.
-Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 16.
+Class revtex4-1 Info: Patching array package. on input line 10.
+Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 10.
 
-Class revtex4-1 Info: cite was not loaded (OK!) on input line 16.
-Class revtex4-1 Info: mcite was not loaded (OK!) on input line 16.
-Class revtex4-1 Info: multicol was not loaded (OK!) on input line 16.
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 10.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 10.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 10.
 
 (./ms_resource_ratio.aux
 
@@ -551,20 +551,20 @@ LaTeX Warning: Label `e:bnet' multiply defined.
 )
 \openout1 = `ms_resource_ratio.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
  (/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count106
@@ -594,7 +594,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box42
-Package hyperref Info: Link coloring OFF on input line 16.
+Package hyperref Info: Link coloring OFF on input line 10.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
@@ -604,15 +604,15 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count112
 )
-LaTeX Info: Redefining \ref on input line 16.
-LaTeX Info: Redefining \pageref on input line 16.
-LaTeX Info: Redefining \nameref on input line 16.
+LaTeX Info: Redefining \ref on input line 10.
+LaTeX Info: Redefining \pageref on input line 10.
+LaTeX Info: Redefining \nameref on input line 10.
 
 (./ms_resource_ratio.out) (./ms_resource_ratio.out)
 \@outlinefile=\write4
 \openout4 = `ms_resource_ratio.out'.
 
-Class revtex4-1 Info: Taking \maketitle back from hyperref on input line 16.
+Class revtex4-1 Info: Taking \maketitle back from hyperref on input line 10.
 \openout3 = `ms_resource_ratioNotes.bib'.
 
 
@@ -620,21 +620,21 @@ Class revtex4-1 Info: Taking \maketitle back from hyperref on input line 16.
 Class revtex4-1 Warning: Assuming \noaffiliation for authors.
 
 
-Underfull \hbox (badness 7362) in paragraph at lines 43--44
+Underfull \hbox (badness 7362) in paragraph at lines 37--38
 []\OT1/cmr/m/n/10 The resource-ratio the-ory of plant co-ex-is-tence
  []
 
 [1{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 51.
+(Font)              <7> on input line 45.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 51.
+(Font)              <5> on input line 45.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 56.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 50.
 
 
-Overfull \hbox (12.29791pt too wide) detected at line 106
+Overfull \hbox (12.29791pt too wide) detected at line 100
 [][][] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 S[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/i
 t/10 eN[] \OMS/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 q[]G[]P[] \OT1/cmr/m/n/10 + 
 [] \OML/cmm/m/it/10 r\OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^
@@ -645,71 +645,75 @@ t/10 eN[] \OMS/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 q[]G[]P[] \OT1/cmr/m/n/10 +
 <R-Ratio_theory.pdf, id=61, 722.7pt x 360.34625pt>
 File: R-Ratio_theory.pdf Graphic file (type pdf)
  <use R-Ratio_theory.pdf>
-Package pdftex.def Info: R-Ratio_theory.pdf used on input line 118.
+Package pdftex.def Info: R-Ratio_theory.pdf used on input line 112.
 (pdftex.def)             Requested size: 255.0pt x 127.14578pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 118--119
+Overfull \hbox (9.0pt too wide) in paragraph at lines 112--113
  [][] 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 119.
+(Font)              <9> on input line 113.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 119.
+(Font)              <6> on input line 113.
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 119.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 113.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 119.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 113.
 
 [2]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 141.
+ on input line 135.
 
 [3 <./R-Ratio_theory.pdf>]
 <DetritusDiffusion.pdf, id=98, 361.35pt x 360.34625pt>
 File: DetritusDiffusion.pdf Graphic file (type pdf)
 
 <use DetritusDiffusion.pdf>
-Package pdftex.def Info: DetritusDiffusion.pdf used on input line 187.
+Package pdftex.def Info: DetritusDiffusion.pdf used on input line 181.
 (pdftex.def)             Requested size: 229.49844pt x 228.86131pt.
-
-<NutrientDiffusion.pdf, id=99, 361.35pt x 360.34625pt>
+ [4 <./DetritusDiffusion.pdf>]
+<NutrientDiffusion.pdf, id=114, 361.35pt x 360.34625pt>
 File: NutrientDiffusion.pdf Graphic file (type pdf)
 
 <use NutrientDiffusion.pdf>
-Package pdftex.def Info: NutrientDiffusion.pdf used on input line 233.
+Package pdftex.def Info: NutrientDiffusion.pdf used on input line 216.
 (pdftex.def)             Requested size: 229.49844pt x 228.86131pt.
- [4 <./DetritusDiffusion.pdf>]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 242.
 
 <ProducerDiffusion.pdf, id=115, 361.35pt x 360.34625pt>
 File: ProducerDiffusion.pdf Graphic file (type pdf)
 
 <use ProducerDiffusion.pdf>
-Package pdftex.def Info: ProducerDiffusion.pdf used on input line 277.
+Package pdftex.def Info: ProducerDiffusion.pdf used on input line 257.
 (pdftex.def)             Requested size: 229.49844pt x 228.86131pt.
  [5 <./NutrientDiffusion.pdf>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 283.
+ on input line 263.
 
 <AlternateStates.pdf, id=130, 361.35pt x 360.34625pt>
 File: AlternateStates.pdf Graphic file (type pdf)
 
 <use AlternateStates.pdf>
-Package pdftex.def Info: AlternateStates.pdf used on input line 300.
+Package pdftex.def Info: AlternateStates.pdf used on input line 280.
 (pdftex.def)             Requested size: 229.49844pt x 228.86131pt.
  [6 <./ProducerDiffusion.pdf> <./AlternateStates.pdf>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 290.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 290.
+
 No file ms_resource_ratio.bbl.
 [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 321.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 301.
  (./ms_resource_ratio.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 321.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 321.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 301.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 301.
 Package rerunfilecheck Info: File `ms_resource_ratio.out' has not changed.
 (rerunfilecheck)             Checksum: 79FF30880C1592409AC5A4DCAF02F380;821.
 
@@ -718,13 +722,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7151 strings out of 493633
- 102188 string characters out of 3143378
- 223041 words of memory out of 3000000
- 10350 multiletter control sequences out of 15000+200000
+ 7165 strings out of 493633
+ 102459 string characters out of 3143378
+ 224261 words of memory out of 3000000
+ 10361 multiletter control sequences out of 15000+200000
  7020 words of font info for 25 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 29i,12n,28p,2144b,377s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,12n,28p,2253b,377s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
 /usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
@@ -740,7 +744,7 @@ ve/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 1/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2011
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2011/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on ms_resource_ratio.pdf (7 pages, 220020 bytes).
+Output written on ms_resource_ratio.pdf (7 pages, 222274 bytes).
 PDF statistics:
  216 PDF objects out of 1000 (max. 8388607)
  180 compressed objects within 2 object streams
